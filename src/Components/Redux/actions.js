@@ -31,10 +31,3 @@ export function deleteTask(taskId) {
         payload: taskId
     }
 }
-
-// export function login() {
-//     return {
-//         type: LOGIN,
-//         payload:
-//     }
-// }

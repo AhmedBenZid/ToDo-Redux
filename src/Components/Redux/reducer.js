@@ -1,4 +1,4 @@
-import { ADD_TASK, EDIT_TASK, COMPLETE_TASK, DELETE_TASK, } from "./actions";
+import { ADD_TASK, EDIT_TASK, COMPLETE_TASK, DELETE_TASK } from "./actions";
 import { tasks } from "./states";
 
 export const reducer = (state = tasks, action) => {

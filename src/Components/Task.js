@@ -14,13 +14,17 @@ function Task({ task }) {
             <div className="col">
                 {edit ? <input className="form-control" type="text" value={editText} onChange={(e) => setEditText(e.target.value)} /> : <h4>{task.description}</h4>}
             </div>
+
+            {/* update the old task and make sur if the user let it empty make sure to get the old one  */}
+
             <button className="btn btn-primary m-2" onClick={() => {
-                dispatch(editTask(
-                    {
-                        ...task,
-                        description: editText
-                    }
-                ))
+                (!editText) ? setEditText(task.description) :
+                    dispatch(editTask(
+                        {
+                            ...task,
+                            description: editText
+                        }
+                    ))
                 setEdit(!edit)
             }}>
                 {edit ? "Update" : "Edit"}

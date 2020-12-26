@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addTask } from "./Redux/actions";
 
+// Add a new task and with a condition to make sure that the user write a one
+
 function AddTask() {
     const [description, setDescription] = useState('');
     const dispatch = useDispatch();

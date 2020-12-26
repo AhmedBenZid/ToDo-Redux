@@ -13,14 +13,14 @@ function AddTask() {
             <div className="row m-2">
                 <input type="text" className="col form-control"
                     value={description}
-                    onChange={(e) => setDescription(e.target.value.trim())} />
+                    onChange={(e) => setDescription(e.target.value)} />
                 <button className="btn btn-primary mx-2"
                     onClick={() => {
-                        (description === "") ? alert('You should add a Task') :
+                        (description === " ") ? alert('You should add a Task') :
                             dispatch(addTask(
                                 {
                                     id: Math.random(),
-                                    description: description,
+                                    description: description.trim(),
                                     isDone: false
                                 }
                             ))

@@ -3,20 +3,19 @@ export const tasks = [
         id: 1,
         description: "First task",
         isDone: false,
-        role: 'Instructeur'
+        role: 'Instructor'
     },
     {
         id: 2,
         description: "Second task",
         isDone: false,
-
-        role: 'Instructeur'
+        role: 'Instructor'
     },
     {
         id: 3,
         description: "Third task",
         isDone: false,
-        role: 'Instructeur'
+        role: 'Instructor'
     },
     {
         id: 4,

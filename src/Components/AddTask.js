@@ -4,7 +4,7 @@ import { addTask } from "./Redux/actions";
 
 // Add a new task and with a condition to make sure that the user write a one
 
-function AddTask() {
+function AddTask({ login }) {
     const [description, setDescription] = useState('');
     const dispatch = useDispatch();
     return (
@@ -23,7 +23,8 @@ function AddTask() {
                                 {
                                     id: Math.random(),
                                     description: description.trim(),
-                                    isDone: false
+                                    isDone: false,
+                                    role: login
                                 }
                             ))
                         setDescription('')

@@ -10,7 +10,6 @@ function Task({ task }) {
     return (
 
         <div className={(!task.isDone) ? classes : classes + "bg-success"}>
-
             <div className="col">
                 {edit ? <input className="form-control" type="text" value={editText} onChange={(e) => setEditText(e.target.value)} /> : <h4>{task.description}</h4>}
             </div>
